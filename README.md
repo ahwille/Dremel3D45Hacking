@@ -20,37 +20,12 @@ Webserver runnning an HTTP API
   
 ### Endpoints
   **/command**     
-  `POST /command HTTP/1.1  
-  Accept: application/json, text/javascript, */*; q=0.01  
-  Content-Type: application/x-www-form-urlencoded  
-  Cache-Control: no-cache  
+  Action | Data | Result | Notes
+  --- | --- | --- | ---
+  POST | GETPRINTERSTATUS= | You get the current status of the printer as a JSON object |
+  POST | PAUSE | The current print job pauses |
   
-  GETPRINTERSTATUS=`
- 
-  return value: Current printer status  
-  example return:  
- `{  
-  "buildPlate_target_temperature":80,
-  "chamber_temperature":38,
-  "door_open":0,
-  "elaspedtime":7617,
-  "error_code":200,
-  "extruder_target_temperature":255,
-  "fanSpeed":0,
-  "filament_type":"NYLON",
-  "firmware_version":"v3.0_R02.03.04",
-  "jobname":"",
-  "jobstatus":"building",
-  "layer":50,
-  "message":"success",
-  "networkBuild":1,
-  "platform_temperature":80,
-  "progress":41.799999999999997,
-  "remaining":5338,
-  "status":"busy",
-  "temperature":252,
-  "totalTime":10090
-  }`
+
   
   **/print_file_uploads**  
   
